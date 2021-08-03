@@ -11,7 +11,7 @@
     padding: 1em 0;
     background-color: var(--bg-color);
     align-items: baseline;
-
+    text-transform: uppercase;
 }
 /* slightly transparent fallback */
 .backdrop-blur {
@@ -45,7 +45,7 @@
 #menu-btn{
     display: none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1080px) {
     .large{
         display: none;
     }
@@ -67,9 +67,9 @@
         z-index: 100;
         border: none;
         background:none;
-        color: #fff;
+        color: var(--primary-text-color);
         position: fixed;
-        top: 1em;
+        top: 0.5em;
         right: 0.5em;
         outline: none;
     }
@@ -85,5 +85,5 @@
 .link-holder.special a{
     text-decoration: none;
     font-weight: 700;
-    color: var(--cta-text-color;
+    color: var(--cta-text-color);
 }

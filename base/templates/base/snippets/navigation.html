@@ -1,0 +1,36 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'base/css/snippets/navigation.css' %}">
+    <nav class="nav large">
+        <h2 class="logo">MailChamp</h2>
+        <li><a href="{% url 'base:home' %}">Home</a></li>
+        <li><a href="{% url 'base:about' %}">About</a></li>
+        <li><a href="{% url 'base:contact' %}">Contact</a></li>
+        <li><a href="#">Works</a></li>
+        {% if user.is_authenticated %}
+            <li class="link-holder special"><a href="#">Logout</a></li>
+        {% else %}
+            <li class="link-holder special"><a href="#">Login</a></li>
+        {% endif %}
+        <!-- <li><a href="">Newsletter</a></li> -->
+    </nav>
+    <nav class="nav small backdrop-blur">
+        <h2 class="logo">MailChamp</h2>
+        <li><a href="{% url 'base:home' %}">Home</a></li>
+        <li><a href="{% url 'base:about' %}">About</a></li>
+        <li><a href="{% url 'base:contact' %}">Contact</a></li>
+        <li><a href="#">Works</a></li>
+        {% if user.is_authenticated %}
+            <li class="link-holder special"><a href="#">Logout</a></li>
+        {% else %}
+            <li class="link-holder special"><a href="#">Login</a></li>
+        {% endif %}
+        <!-- <li><a href="">Newsletter</a></li> -->
+    </nav>
+    <button id="menu-btn" onclick="menuBtn()"><i class="fas fa-bars"></i></button>
+    <script>
+        function menuBtn(){
+            let menu = document.getElementById('menu-btn');
+            let smallNav = document.querySelector('.small');
+            smallNav.classList.toggle('active');
+        }
+    </script>
